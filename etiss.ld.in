@@ -34,6 +34,15 @@ SECTIONS
   .text : {
     *(.text .text.* )
   }  > ROM
+  
+  PROVIDE (_sprof = .);
+  
+  .prof	: {
+ 	. = ALIGN(4);
+    *(.prof)
+  } > ROM
+  
+  PROVIDE (_eprof = .);
 
   .rodata : {
     *(.rodata .rodata.*)
