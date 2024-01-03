@@ -22,7 +22,7 @@ set(CMAKE_CXX_COMPILER "${RISCV_TOOLCHAIN}-g++${EXE_EXT}")
 
 
 
-set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -pg -D__riscv__ -march=${RISCV_ARCH} -mabi=${RISCV_ABI}")
+set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -D__riscv__ -march=${RISCV_ARCH} -mabi=${RISCV_ABI}")
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -D__riscv__ -march=${RISCV_ARCH} -mabi=${RISCV_ABI}")
 set(CMAKE_ASM_FLAGS "${CMAKE_ASM_FLAGS} -D__riscv__ -march=${RISCV_ARCH} -mabi=${RISCV_ABI}")
 set(CMAKE_EXE_LINKER_FLAGS "-march=${RISCV_ARCH} -mabi=${RISCV_ABI}")
